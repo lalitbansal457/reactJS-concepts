@@ -1,12 +1,14 @@
 //useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
 
+
 import {useRef} from "react";
 
 const InputForm = () => {
 	const inputRef = useRef();
 
 	const handleClick = () => {
-		console.log(inputRef.current.value);
+		console.log(inputRef.current);
+		console.log(inputRef.current.focus());
 	}
 
 	return (
